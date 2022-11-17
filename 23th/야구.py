@@ -4,7 +4,6 @@ sys.stdin = open("23th\\input",'r')
 input = sys.stdin.readline
 N = int(input())
 
-
 batting_orders_wo_n4 = list(permutations([i for i in range(1,9)]))
 batting_orders = []
 for o in batting_orders_wo_n4:
@@ -16,7 +15,7 @@ for _ in range(N):
     hits = list(map(int,input().split())) # 이닝 결과
     for i in range(len(batting_orders)):
         out_count = 0
-        b1,b2,b3 = 0,0,0 # 루 주자 정보
+        b1,b2,b3 = 0,0,0 # 루 주자 정보... 이걸 배열로 놓으면 시간초과
         while out_count < 3: # 3아웃 전까지 이닝 진행
                 if hits[batting_orders[i][abs[i]]] == 0:
                     out_count += 1

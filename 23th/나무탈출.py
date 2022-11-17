@@ -1,5 +1,7 @@
 # 성원이가 홀수번째 턴을 가져가므로, 홀수번째에 모든 말이 사라지면 성원이의 승리
+# 말들은 한턴에 하나씩 거리 1 씩 움직이므로
 # 따라서 루트노드에서 리프노드까지 모든 거리의 합이 홀수이면 성원이의 승리
+# 루트 노드에서 리프노드까지 거리를 알고 싶으므로 DFS를 사용한다.
 import sys
 from collections import defaultdict
 sys.setrecursionlimit('500000')
